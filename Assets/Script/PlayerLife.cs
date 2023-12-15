@@ -28,4 +28,10 @@ public class PlayerLife : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision){
+        if(collision.CompareTag("Loop")){
+            GameObject.Find("GameManager").GetComponent<LoopMap>().Loop();
+        }
+    }
 }

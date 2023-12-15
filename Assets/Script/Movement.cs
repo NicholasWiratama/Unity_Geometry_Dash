@@ -47,67 +47,12 @@ public class Movement : MonoBehaviour
         generic.createGamemode(rb, this, true, 19.5269f, 9.057f, true, false, 409.1f);
     }
 
-    void Ship()
-    {
-        rb.gravityScale = 2.93f * (Input.GetMouseButton(0) ? -1 : 1) * Gravity;
-        generic.LimitYVelocity(9.95f, rb);
-        transform.rotation = Quaternion.Euler(0, 0, rb.velocity.y * 2);
-    }
-
-    void Ball()
-    {
-        generic.createGamemode(rb, this, true, 0, 6.2f, false, true);
-    }
-
-    void UFO()
-    {
-        generic.createGamemode(rb, this, false, 10.841f, 4.1483f, false, false, 0, 10.841f);
-    }
-
     void Wave()
     {
         rb.gravityScale = 0;
         rb.velocity = new Vector2(0, SpeedValues[(int)CurrentSpeed] * (Input.GetMouseButton(0) ? 1 : -1) * Gravity);
     }
 
-    float robotXstart = -100;
-    bool onGroundProcessed;
-    bool gravityFlipped;
-
-    void Robot()
-    {
-        if (!Input.GetMouseButton(0))
-            clickProcessed = false;
-
-        if (OnGround() && !clickProcessed && Input.GetMouseButton(0))
-        {
-            gravityFlipped = false;
-            clickProcessed = true;
-            robotXstart = transform.position.x;
-            onGroundProcessed = true;
-        }
-
-        if (Mathf.Abs(robotXstart - transform.position.x) <= 3)
-        {
-            if (Input.GetMouseButton(0) && onGroundProcessed && !gravityFlipped)
-            {
-                rb.gravityScale = 0;
-                rb.velocity = Vector2.up * 10.4f * Gravity;
-                return;
-            }
-        }
-        else if (Input.GetMouseButton(0))
-            onGroundProcessed = false;
-
-        rb.gravityScale = 8.62f * Gravity;
-        generic.LimitYVelocity(23.66f, rb);
-    }
-
-
-    void Spider()
-    {
-        generic.createGamemode(rb, this, true, 238.29f, 6.2f, false, true, 0, 238.29f);
-    }
 
     public void ChangeThroughPortal(Gamemodes Gamemode, Speeds Speed, int gravity, int State)
     {
@@ -119,11 +64,7 @@ public class Movement : MonoBehaviour
             case 1:
                 CurrentGamemode = Gamemode;
                 break;
-            case 2:
-                Gravity = gravity;
-                rb.gravityScale = Mathf.Abs(rb.gravityScale) * gravity;
-                gravityFlipped = true;
-                break;
+
         }
     }
 
