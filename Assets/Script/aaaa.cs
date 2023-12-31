@@ -31,6 +31,10 @@ public class LoopMap : MonoBehaviour
     int random;
     public GameObject startPos;
 
+    // private Transform destination;
+
+    // public bool loop;
+    // public float distance = 0.2f;
 
     void RPmap(){
         random = Random.Range(0,5);
@@ -41,14 +45,20 @@ public class LoopMap : MonoBehaviour
     }
 
     private void Start(){
-
+        // if (loop == false){
+        //     destination = GameObject.FindGameObjectwithTag("Loop").GetComponent<Transform>();
+        // }else{
+            
+        //     destination = GameObject.FindGameObjectwithTag("Respawn").GetComponent<Transform>();
+        // }
         startPos = GameObject.Find("Spawn").gameObject;
       
     }
-
-    public void Loop(){
+    private void OnTriggerEnter2D(Collider2D other){
         RPmap();
         this.gameObject.transform.position= new Vector2(startPos.transform.position.x ,this.gameObject.transform.position.y);
-        
+        // if (Vector2.Distance(transform.position, other.tranform.position) > distance){
+        //     other.transform.position = new Vector2 (destination.position.x, destination.position.y);
+        // }
     }
 }
