@@ -18,6 +18,11 @@ public class Crying : MonoBehaviour
             return;
         }
 
+        // Randomly choose a prefab from the array
+        //GameObject randomPrefab = prefabs[Random.Range(0, prefabs.Length)];
+        //GameObject instantiatedPrefab = Instantiate(randomPrefab);
+        // Vector2 originalPosition = instantiatedPrefab.transform.position;
+        // instantiatedPrefab.transform.position = new Vector2(originalPosition.x + 30f, -3f);
         
         Vector3 spawnPosition = new Vector3(this.gameObject.transform.position.x + 15f, -3f, this.gameObject.transform.position.z);
         SpawnPrefab(spawnPosition);

@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+//using UnityEngine.Vector2[];
 
-public class Gamemanager : MonoBehaviour
-{   
-    
+
+public class LoopMap : MonoBehaviour
+{
+
     private Vector2[] Obs1 = {
         new Vector2(-12f,3f),
         new Vector2(-4.4f,-2.7f)
@@ -28,12 +30,13 @@ public class Gamemanager : MonoBehaviour
     public GameObject ob4;
     int random;
     public GameObject startPos;
+
+    // private Transform destination;
+
     // public bool loop;
     // public float distance = 0.2f;
 
-
-
-    public void RPmap(){
+    void RPmap(){
         random = Random.Range(0,5);
         ob1.transform.position = Obs1[random];
         ob2.transform.position = Obs2[random];
@@ -42,26 +45,20 @@ public class Gamemanager : MonoBehaviour
     }
 
     private void Start(){
-
-        //startPos = GameObject.Find("Spawn").gameObject;
+        // if (loop == false){
+        //     destination = GameObject.FindGameObjectwithTag("Loop").GetComponent<Transform>();
+        // }else{
+            
+        //     destination = GameObject.FindGameObjectwithTag("Respawn").GetComponent<Transform>();
+        // }
+        startPos = GameObject.Find("Spawn").gameObject;
       
     }
-
-    public void Loop(){
+    private void OnTriggerEnter2D(Collider2D other){
         RPmap();
-        //this.gameObject.transform.position= new Vector2(startPos.transform.position.x ,this.gameObject.transform.position.y);
-        
+        this.gameObject.transform.position= new Vector2(startPos.transform.position.x ,this.gameObject.transform.position.y);
+        // if (Vector2.Distance(transform.position, other.tranform.position) > distance){
+        //     other.transform.position = new Vector2 (destination.position.x, destination.position.y);
+        // }
     }
-
-    // Start is called before the first frame update
-    public void StartGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
-
-    public void ExitGame()
-    {
-        Application.Quit();
-    }
-
 }
