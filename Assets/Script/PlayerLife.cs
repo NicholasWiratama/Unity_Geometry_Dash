@@ -14,16 +14,26 @@ public class PlayerLife : MonoBehaviour
         if (collision.gameObject.CompareTag("Trap"))
         {
             Die();
+            SceneManager.LoadScene("Lose");
+        }
+        if (collision.gameObject.CompareTag("Finish"))
+        {
+            Win();
+            SceneManager.LoadScene("Win");
         }
     }
 
     private void Die()
     {
         DeathSoundEffect.Play();
-        io.bodyType = RigidbodyType2D.Static;
+        // io.bodyType = RigidbodyType2D.Static;
        
     }
 
+    void Win()
+    {
+
+    }
     private void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);

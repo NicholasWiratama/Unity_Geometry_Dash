@@ -5,58 +5,71 @@ using UnityEngine.SceneManagement;
 
 public class Gamemanager : MonoBehaviour
 {   
-    
-    private Vector2[] Obs1 = {
-        new Vector2(-12f,3f),
-        new Vector2(-4.4f,-2.7f)
-    };
-    private Vector2[] Obs2 = {
-        new Vector2(-2f,6f),
-        new Vector2(-11f,-4.3f)
-    };
-    private Vector2[] Obs3 = {
-        new Vector2(7f,-7f),
-        new Vector2(8.3f,6f)
-    };
-    private Vector2[] Obs4 = {
-        new Vector2(15f,3f),
-        new Vector2(13.8f,6.6f)
-    };
-    public GameObject ob1;
-    public GameObject ob2;
-    public GameObject ob3;
-    public GameObject ob4;
-    int random;
-    public GameObject startPos;
-    // public bool loop;
-    // public float distance = 0.2f;
+    private int[] levels = { 1, 2, 3 };
+    private int currentLevel = 1;
+    private int latestPlayedLevel = 1;  // Initialize with the default level
 
+    // private Text levelText;
 
-
-    public void RPmap(){
-        random = Random.Range(0,5);
-        ob1.transform.position = Obs1[random];
-        ob2.transform.position = Obs2[random];
-        ob3.transform.position = Obs3[random];
-        ob4.transform.position = Obs4[random];
-    }
-
-    private void Start(){
-
-        //startPos = GameObject.Find("Spawn").gameObject;
-      
-    }
-
-    public void Loop(){
-        RPmap();
-        //this.gameObject.transform.position= new Vector2(startPos.transform.position.x ,this.gameObject.transform.position.y);
-        
-    }
-
-    // Start is called before the first frame update
-    public void StartGame()
+    void Start()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        StartGame();
+    }
+
+    void StartGame()
+    {
+        Debug.Log("Nyaa~ Welcome to the Nekomata Adventure Game! Let's have some fun, Master!");
+        LoadLatestPlayedLevel();  // Load the latest played level from PlayerPrefs
+        // UpdateLevelText();
+    }
+
+    void PlayLevel()
+    {
+        Debug.Log($"Nyaa~ Playing level {currentLevel}...");
+
+        // Code for the gameplay goes here, Master! >w<
+        // For now, let's assume you win.
+        WinLevel();
+    }
+
+    void WinLevel()
+    {
+        Debug.Log($"Yay! Nyaa~ You've successfully conquered level {currentLevel}! Such a masterful player, Master!");
+
+        // Save the latest played level
+        latestPlayedLevel = currentLevel;
+        PlayerPrefs.SetInt("LatestPlayedLevel", latestPlayedLevel);
+
+        LoadStageSelector();  // Call a function to load the stage selector
+
+        // UpdateLevelText();
+    }
+
+    // void UpdateLevelText()
+    // {
+    //     levelText.text = $"Level: {currentLevel}";
+    // }
+
+    public void RetryButton()
+    {
+        Debug.Log("Nyaa~ Master wants to retry the level! Let's go for it!");
+        PlayLevel();  // Retry the current level
+    }
+
+    void LoadStageSelector()
+    {
+        // Load your stage selector scene here, Master!
+        // For example:
+        // SceneManager.LoadScene("StageSelectorScene");
+    }
+
+    void LoadLatestPlayedLevel()
+    {
+        // Load the latest played level from PlayerPrefs
+        latestPlayedLevel = PlayerPrefs.GetInt("LatestPlayedLevel", 1);
+
+        // Set the current level to the latest played level
+        currentLevel = latestPlayedLevel;
     }
 
     public void ExitGame()

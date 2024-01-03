@@ -10,7 +10,7 @@ public class Movement : MonoBehaviour
     public Speeds CurrentSpeed;
     public Gamemodes CurrentGamemode;
     //                       0      1      2       3      4
-    float[] SpeedValues = { 8.6f, 10.4f, 12.96f, 15.6f, 19.27f };
+    float[] SpeedValues = { 5f, 10.4f, 12.96f, 15.6f, 19.27f };
 
     public float GroundCheckRadius;
     public LayerMask GroundMask;
