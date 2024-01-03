@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Trap
+  - Wave Portal
+  - Cube Portal
+  - GameMusic
   layers:
   - Default
   - TransparentFX
