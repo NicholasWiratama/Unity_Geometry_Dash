@@ -362,7 +362,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1377923612}
         m_TargetAssemblyTypeName: Gamemanager, Assembly-CSharp
-        m_MethodName: TryAgain
+        m_MethodName: RetryLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
