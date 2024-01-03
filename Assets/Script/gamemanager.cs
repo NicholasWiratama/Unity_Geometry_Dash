@@ -5,71 +5,41 @@ using UnityEngine.SceneManagement;
 
 public class Gamemanager : MonoBehaviour
 {   
-    private int[] levels = { 1, 2, 3 };
-    private int currentLevel = 1;
-    private int latestPlayedLevel = 1;  // Initialize with the default level
+    public string[] levelScenes = { "Level1", "Level2", "Level3" };
+    private int currentLevelIndex = 0;
 
-    // private Text levelText;
-
-    void Start()
+    public void Level1()
     {
-        StartGame();
+        currentLevelIndex = 1;
+        SceneManager.LoadScene(levelScenes[currentLevelIndex]);
     }
 
-    void StartGame()
+    public void Level2()
     {
-        Debug.Log("Nyaa~ Welcome to the Nekomata Adventure Game! Let's have some fun, Master!");
-        LoadLatestPlayedLevel();  // Load the latest played level from PlayerPrefs
-        // UpdateLevelText();
+        currentLevelIndex = 2;
+        SceneManager.LoadScene(levelScenes[currentLevelIndex]);
     }
 
-    void PlayLevel()
+    public void Level3()
     {
-        Debug.Log($"Nyaa~ Playing level {currentLevel}...");
-
-        // Code for the gameplay goes here, Master! >w<
-        // For now, let's assume you win.
-        WinLevel();
+        currentLevelIndex = 3;
+        SceneManager.LoadScene(levelScenes[currentLevelIndex]);
     }
 
-    void WinLevel()
+    public void RetryLevel()
     {
-        Debug.Log($"Yay! Nyaa~ You've successfully conquered level {currentLevel}! Such a masterful player, Master!");
-
-        // Save the latest played level
-        latestPlayedLevel = currentLevel;
-        PlayerPrefs.SetInt("LatestPlayedLevel", latestPlayedLevel);
-
-        LoadStageSelector();  // Call a function to load the stage selector
-
-        // UpdateLevelText();
+        // Reload the current level
+        SceneManager.LoadScene(levelScenes[currentLevelIndex]);
     }
 
-    // void UpdateLevelText()
-    // {
-    //     levelText.text = $"Level: {currentLevel}";
-    // }
-
-    public void RetryButton()
+    public void Continue()
     {
-        Debug.Log("Nyaa~ Master wants to retry the level! Let's go for it!");
-        PlayLevel();  // Retry the current level
+        SceneManager.LoadScene("LevelSelect");
     }
 
-    void LoadStageSelector()
+    public void StartGame()
     {
-        // Load your stage selector scene here, Master!
-        // For example:
-        // SceneManager.LoadScene("StageSelectorScene");
-    }
-
-    void LoadLatestPlayedLevel()
-    {
-        // Load the latest played level from PlayerPrefs
-        latestPlayedLevel = PlayerPrefs.GetInt("LatestPlayedLevel", 1);
-
-        // Set the current level to the latest played level
-        currentLevel = latestPlayedLevel;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void ExitGame()
