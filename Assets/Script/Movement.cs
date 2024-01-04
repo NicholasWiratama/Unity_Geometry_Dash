@@ -10,7 +10,7 @@ public class Movement : MonoBehaviour
     public static Speeds CurrentSpeed;
     public Gamemodes CurrentGamemode;
     //                       0    1     2      3       4      5
-    float[] SpeedValues = { 0f, 8.6f, 10.4f, 12.96f, 15.6f, 19.27f };
+    float[] SpeedValues = { 0f, 5f, 10.4f, 12.96f, 15.6f, 19.27f };
 
     public float GroundCheckRadius;
     public LayerMask GroundMask;
@@ -33,6 +33,7 @@ public class Movement : MonoBehaviour
         if (CurrentSpeed > 0)
             transform.position += Vector3.right * SpeedValues[(int)CurrentSpeed] * Time.deltaTime;
         Invoke(CurrentGamemode.ToString(), 0);
+        // Debug.Log(SpeedValues[(int)CurrentSpeed]);
     }
 
     public bool OnGround()
