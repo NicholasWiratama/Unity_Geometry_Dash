@@ -483,8 +483,8 @@ Transform:
   m_GameObject: {fileID: 96363008}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 246.9, y: -12.34, z: 0}
-  m_LocalScale: {x: 704.30963, y: 10.588241, z: 1}
+  m_LocalPosition: {x: 243.4827, y: -7.4113, z: 0}
+  m_LocalScale: {x: 710, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -904,7 +904,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.492682
+  orthographic size: 6.21
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1044,7 +1044,7 @@ GameObject:
   - component: {fileID: 681702969}
   - component: {fileID: 681702968}
   m_Layer: 6
-  m_Name: Ground (1)
+  m_Name: Ceiling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1156,8 +1156,8 @@ Transform:
   m_GameObject: {fileID: 681702967}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 246.3559, y: 6.72, z: 0}
-  m_LocalScale: {x: 704.30963, y: 10.588241, z: 1}
+  m_LocalPosition: {x: 243.2228, y: 1.6312, z: 0}
+  m_LocalScale: {x: 710, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
