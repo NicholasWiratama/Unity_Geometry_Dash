@@ -1900,8 +1900,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream:Assets/Scenes/Endless Boss.unity
-=======
 --- !u!1 &1675340615
 GameObject:
   m_ObjectHideFlags: 0
@@ -2654,7 +2652,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83f6713c17fd6004eb3ecf2b06363806, type: 3}
->>>>>>> Stashed changes:Assets/Scenes/Level3 1.unity
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2666,11 +2663,8 @@ SceneRoots:
   - {fileID: 955463360}
   - {fileID: 1543691372}
   - {fileID: 657094811}
-<<<<<<< Updated upstream:Assets/Scenes/Endless Boss.unity
-=======
   - {fileID: 7328320717062615219}
   - {fileID: 2312314177237379518}
   - {fileID: 5331767234485402921}
   - {fileID: 1403801232660745856}
   - {fileID: 683382887}
->>>>>>> Stashed changes:Assets/Scenes/Level3 1.unity

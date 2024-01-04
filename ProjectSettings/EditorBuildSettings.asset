@@ -12,23 +12,13 @@ EditorBuildSettings:
     path: Assets/Scenes/TItle Screen.unity
     guid: 666bad78684c52d4cbd730495d04bb5e
   - enabled: 1
-<<<<<<< Updated upstream
-    path: Assets/Scenes/LevelSelect.unity
-    guid: f56603107ea314d49aedc48b0cc9421f
-  - enabled: 0
-    path: Assets/Scenes/Level1.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/Stage.unity
-=======
     path: Assets/Scenes/Level2.unity
->>>>>>> Stashed changes
     guid: 530b8d57d8803b344bf9ea82928d69b5
   - enabled: 1
     path: Assets/Scenes/OptionsMenu.unity
     guid: d6d9a727cf654ee4494a5323f722f93a
   - enabled: 1
-    path: Assets/Scenes/Tutorial.unity
+    path: Assets/Scenes/Stage 2.unity
     guid: c60623d32aa9012469df6473f6c0e648
   - enabled: 1
     path: Assets/Scenes/Lose.unity
