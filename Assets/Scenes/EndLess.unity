@@ -465,6 +465,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea3dc3ad4fa9564fb5b9a10f787aa2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameOverPanel: {fileID: 0}
+  Wintext: {fileID: 0}
   DeathSoundEffect: {fileID: 741830917}
 --- !u!61 &376150565
 BoxCollider2D:
@@ -1667,7 +1669,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ef6071da8cb8015479ed28b42296662f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.419
   m_Pitch: 1
   Loop: 1
   Mute: 0
