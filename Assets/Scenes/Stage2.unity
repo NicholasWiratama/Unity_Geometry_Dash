@@ -750,7 +750,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1924a76093fb47c4e975bee60031cb8c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d880eaf56e4593f46b736fb7c3a64629, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1110,8 +1110,8 @@ Transform:
   m_GameObject: {fileID: 566068720}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.07, y: 0.19, z: 0}
-  m_LocalScale: {x: 0.344756, y: 0.345625, z: 0.79}
+  m_LocalPosition: {x: 0.01, y: 0.16, z: 0}
+  m_LocalScale: {x: 0.6243486, y: 0.7270177, z: 0.79}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 16185273}
@@ -1157,7 +1157,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 5914146cc6cefd5449d470f990a3220e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3f87a4282da489746817fa90ddcb13cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1330,7 +1330,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.54905653, g: 0.8514539, b: 1, a: 1}
+  m_Color: {r: 0.2245282, g: 0.92918724, b: 1, a: 0.28627452}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1349,8 +1349,8 @@ Transform:
   m_GameObject: {fileID: 681702967}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 243.2228, y: 2.4416, z: 0}
-  m_LocalScale: {x: 710, y: 2.1208, z: 1}
+  m_LocalPosition: {x: 243.2228, y: 2.5742, z: 0}
+  m_LocalScale: {x: 710, y: 1.8557627, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1793,7 +1793,7 @@ Transform:
   m_GameObject: {fileID: 1165781751}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 671.1, y: -0.1569, z: 12.526828}
+  m_LocalPosition: {x: 622.4, y: -0.1569, z: 12.526828}
   m_LocalScale: {x: -0.7862344, y: 8.610482, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2251,7 +2251,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: dc1d325f8ef89134d927986e9657c01a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6d43f0459b4be8044a6536f57ac2c928, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

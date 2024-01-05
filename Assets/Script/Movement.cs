@@ -70,8 +70,11 @@ public class Movement : MonoBehaviour
 
     void Wave()
     {
-        rb.gravityScale = 0;
-        rb.velocity = new Vector2(0, SpeedValues[(int)CurrentSpeed] * (Input.GetMouseButton(0) ? 1 : -1) * Gravity);
+        if (rb.bodyType != RigidbodyType2D.Static)
+        {
+            rb.gravityScale = 0;
+            rb.velocity = new Vector2(0, SpeedValues[(int)CurrentSpeed] * (Input.GetMouseButton(0) ? 1 : -1) * Gravity);
+        }
     }
 
     float robotXstart = -100;
